@@ -1,0 +1,27 @@
+FROM python:3.9-slim-buster
+
+WORKDIR /app
+
+RUN mkdir -p /postgres_data
+
+# prevent python from writing .pyc files and buffering stdout stderr
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# install pscopg2 dependencies
+RUN apt-get update \
+    && apt-get -y install netcat gcc postgresql \
+    && apt-get clean
+
+# Setup GDAL
+RUN apt-get update &&\
+   apt-get install -y binutils libproj-dev gdal-bin python-gdal python3-gdal 
+
+# copy requirements to the image
+COPY ./requirements.txt /app/requirements.txt
+
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+# Copy over the project
+COPY . /app
