@@ -18,14 +18,14 @@ services:
     #   - 8000:8000
     env_file:
       - .env
-    restart: "on-failure"
+    restart: on-failure
     depends_on:
       - postgres-db
     networks:
-      - school-api
+      - school-api-net
 
   postgres-db:
-    image: kartoza/postgis:12.0
+    image: kartoza/postgis:13.0
     ports:
       - 5432:5432
     volumes:
@@ -34,9 +34,9 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASS=${POSTGRES_PASS}
       - POSTGRES_DB=${POSTGRES_DB}
-    restart: "on-failure"
+    restart: on-failure
     networks:
-      - school-api
+      - school-api-net
 
   client:
     build:
@@ -49,7 +49,7 @@ services:
     depends_on:
       - school-api
     networks:
-     - school-api
+      - school-api-net
 
   nginx:
     restart: always
@@ -61,10 +61,10 @@ services:
     ports:
       - 8080:80
     networks:
-      - school-api
+      - school-api-net
 
 networks:
-  school-api:
+  school-api-net:
     driver: bridge
 
 volumes:
