@@ -11,7 +11,7 @@
             "female": 222,
             "capacity_availability": "True",
             "school_code": 2341,
-            "location": "POINT(-114.197 51.111)",
+            "location": "POINT(-114.170 51.111)",
             "created_at": "2022-05-17T18:07:21.553",
             "updated_at": "2022-05-17T18:07:22.233"
         }
@@ -80,6 +80,23 @@
             "capacity_availability": "False",
             "school_code": 2213,
             "location": "POINT(-114.1614 51.1126)",
+            "created_at": "2022-05-17T17:14:32.433",
+            "updated_at": "2022-05-17T17:14:34.512"
+        }
+    },
+    {
+        "model": "schools.school",
+        "pk": 6,
+        "fields": {
+            "name": "Robert Thirsk High School",
+            "community": "Dalhousie",
+            "district": "Public",
+            "level": "Senior High",
+            "male": 278,
+            "female": 276,
+            "capacity_availability": "True",
+            "school_code": 2213,
+            "location": "POINT(-114.1952 51.1307)",
             "created_at": "2022-05-17T17:14:32.433",
             "updated_at": "2022-05-17T17:14:34.512"
         }
