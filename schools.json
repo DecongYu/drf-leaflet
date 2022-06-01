@@ -38,7 +38,7 @@
         "pk": 3,
         "fields": {
             "name": "Sir Winston Churchill High School",
-            "community": "Vasity",
+            "community": "Brent Wood",
             "district": "Public",
             "level": "Senior High",
             "male": 478,
@@ -55,7 +55,7 @@
         "pk": 4,
         "fields": {
             "name": "Marion Carson School",
-            "community": "Vasity",
+            "community": "Varsity",
             "district": "Cathlic",
             "level": "Elemnetry",
             "male": 67,
@@ -89,7 +89,7 @@
         "pk": 6,
         "fields": {
             "name": "Robert Thirsk High School",
-            "community": "Dalhousie",
+            "community": "Arbour Lake",
             "district": "Public",
             "level": "Senior High",
             "male": 278,

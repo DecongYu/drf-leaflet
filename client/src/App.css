@@ -9,3 +9,19 @@
   color: #ffffff;
   border: 2px dashed #fff;
 }
+
+.center {
+  margin: auto;
+  width: 80%;
+  height: 90vh auto;
+  border: 1px solid #373737;
+  padding: 10px;
+}
+
+.right-bordered {
+  position: absolute;
+  right: 0px;
+  width: 80%;
+  border: 1px solid #373737;
+  padding: 10px;
+}
